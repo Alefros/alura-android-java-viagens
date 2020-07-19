@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/resumo_pacote_imagem"
+        android:layout_width="0dp"
+        android:layout_height="140dp"
+        android:contentDescription="@string/imagem_do_pacote"
+        android:scaleType="centerCrop"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0"
+        app:srcCompat="@drawable/sao_paulo_sp" />
+
+    <TextView
+        android:id="@+id/resumo_pacote_local"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/resumo_pacote_imagem"
+        tools:text="São Paulo" />
+
+    <TextView
+        android:id="@+id/resumo_pacote_dias"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="@+id/resumo_pacote_local"
+        app:layout_constraintTop_toBottomOf="@+id/resumo_pacote_local"
+        tools:text="2 dias" />
+
+    <TextView
+        android:id="@+id/resumo_pacote_periodo"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:textSize="14sp"
+        app:layout_constraintStart_toStartOf="@+id/resumo_pacote_dias"
+        app:layout_constraintTop_toBottomOf="@+id/resumo_pacote_dias"
+        app:layout_constraintEnd_toStartOf="@id/resumo_pacote_preco"
+        tools:text="8/12 - 10/12 de 2020" />
+
+    <TextView
+        android:id="@+id/resumo_pacote_preco"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:gravity="right"
+        android:layout_marginRight="8dp"
+        android:textColor="@android:color/holo_green_dark"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="@+id/resumo_pacote_periodo"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/resumo_pacote_periodo"
+        tools:text="R$ 243,99" />
+
+    <TextView
+        android:id="@+id/resumo_pacote_preco_final"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/preco_final"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toTopOf="@+id/resumo_pacote_preco"
+        app:layout_constraintEnd_toEndOf="@+id/resumo_pacote_preco" />
+
+    <Button
+        android:id="@+id/resumo_pacote_botao_pagar"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginBottom="8dp"
+        android:background="@drawable/botao_laranja"
+        android:text="@string/realizar_pagamento"
+        android:textColor="@android:color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/resumo_pacote_imagem"
+        app:layout_constraintVertical_bias="1.0" />
+</android.support.constraint.ConstraintLayout>
